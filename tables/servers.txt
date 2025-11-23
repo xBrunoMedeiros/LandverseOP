@@ -285,6 +285,21 @@ serverType kRO_RagexeRE_2009_11_04a
 serverEncoding Western
 addTableFolders translated/kRO_english;kRO
 
+[RAGNAROK LAND BR]
+ip 103.234.239.1
+port 6900
+master_version 1
+version 55
+serverType Landverse
+serverEncoding Western
+addTableFolders Landverse;translated/kRO_english
+charBlockSize 247
+charDeleteDateType 1
+blockingPlayerCancel 1
+rankingSystemType 1
+itemListType 1
+pinCode 0
+
 ####################
 # Dead
 

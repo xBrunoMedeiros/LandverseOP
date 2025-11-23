@@ -3,7 +3,7 @@
 
 ######## Login options and server-specific options ########
 
-master
+master RAGNAROK LAND BR
 server
 username
 password
@@ -22,10 +22,10 @@ forceMapIP
 
 # 1 = hook into RO client, 2 = Act as stand-alone proxy, proxy = act as true proxy
 # https://openkore.com/wiki/XKore
-XKore 0
+XKore 1
 XKore_port 2350
 XKore_dll NetRedirect.dll
-XKore_injectDLL 1
+XKore_injectDLL 0
 XKore_autoAttachIfOneExe 1
 XKore_silent 1
 XKore_bypassBotDetection 0
@@ -376,7 +376,7 @@ sleepTime 10000
 
 ignoreAll 0
 itemHistory 0
-autoTalkCont 1
+autoTalkCont 0
 noAutoSkill 0
 portalCompile 1
 portalRecord 2
