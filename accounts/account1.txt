@@ -1,0 +1,93 @@
+!include ../control/config.txt
+
+#######################################
+# Openkore configs
+#######################################
+XKore_listenPort 6902
+adminPassword
+
+#######################################
+# Openkore account
+#######################################
+master
+server
+username
+password
+loginPinCode
+char
+otpSeed
+storageAuto_password
+
+#######################################
+# Macro configs
+#######################################
+# LeaderClan_Class stalker
+# LeaderClan_QuestDone 7138,7139,7140,7141,7147,7148,7149,7150,7151
+
+#######################################
+# Auto add skills ( Not recommended )
+#######################################
+skillsAddAuto_ai auto
+# skillsAddAuto 0
+# skillsAddAuto_list
+
+#######################################
+# Auto add stats ( Not recommended )
+#######################################
+statsAddAuto_ai auto
+# statsAddAuto 0
+# statsAddAuto_list
+
+#######################################
+# Macro includes
+#######################################
+#!include ../add-ons/setup/item-usage/healing-items.txt
+#!include ../add-ons/setup/job-skills/3-1/lordknight.txt
+#!include ../add-ons/setup/job-skills/3-2/stalker.txt
+
+#######################################
+# Grind map
+#######################################
+lockMap
+
+#######################################
+# Grind config
+#######################################
+attackAuto 0
+attackAuto_ks 1
+route_randomWalk 0
+
+#######################################
+# Save map
+#######################################
+saveMap
+saveMapPending
+
+#######################################
+# Auto store
+#######################################
+storageAuto 0
+storageAuto_npc
+storageAuto_npc_steps
+
+#######################################
+# Auto sell
+#######################################
+sellAuto 0
+sellAuto_npc
+
+#######################################
+# Auto sit
+#######################################
+sitAuto_idle 1
+sitAuto_hp_lower 40%
+sitAuto_hp_upper 80%
+
+#######################################
+# Others
+#######################################
+macro_orphans terminate
+
+# 
+dcOnServerClose 1
+dcOnServerShutDown 1
