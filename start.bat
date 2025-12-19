@@ -45,7 +45,7 @@ for /f "usebackq tokens=1,* delims= " %%a in ("%account_file%") do (
     if /i "%%a"=="password"         set "RO_PASSWORD=%%b"
     if /i "%%a"=="char"             set "RO_CHAR=%%b"
     if /i "%%a"=="XKore_listenIp"   set "OPENKORE_HOST=%%b"
-    if /i "%%a"=="XKore_listenPort" set "OPENKORE_PORT=%%b"
+    if /i "%%a"=="XKore_port"       set "OPENKORE_PORT=%%b"
 )
 
 set VSF=123
