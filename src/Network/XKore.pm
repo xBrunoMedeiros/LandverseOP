@@ -262,7 +262,7 @@ sub checkConnection {
 
 	message TF("Please start the Ragnarok Online client (%s)\n", $config{XKore_exeName}), "startup";
 	Plugins::callHook('XKore_start');
-	while ($loop) {
+	while ($loop && 0) {
 		undef @list;
 		my @z = Utils::Win32::listProcesses();
 

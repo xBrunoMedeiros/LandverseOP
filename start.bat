@@ -48,9 +48,8 @@ for /f "usebackq tokens=1,* delims= " %%a in ("%account_file%") do (
     if /i "%%a"=="XKore_port"       set "OPENKORE_PORT=%%b"
 )
 
-set VSF=123
-set OPENKORE_HOST=%OPENKORE_HOST%
-set OPENKORE_PORT=%OPENKORE_PORT%
+:: Set game server
+set RO_SERVER=0
 
 :: Set game cwd
 cd /d %GAME_FOLDER%
