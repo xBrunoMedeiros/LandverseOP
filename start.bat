@@ -3,6 +3,9 @@
 :: Enable delayed expansion for real-time variable updates inside loops
 setlocal enabledelayedexpansion
 
+:: Save current cwd
+set "CURRENT_CWD=%cd%"
+
 REM This script starts the CLIENT with a specified account configuration.
 if "%~1"=="" (
     set /p account="Enter the account index or name (e.g., 0, account1): "
@@ -45,6 +48,10 @@ for /f "usebackq tokens=1,* delims= " %%a in ("%account_file%") do (
     if /i "%%a"=="XKore_listenPort" set "OPENKORE_PORT=%%b"
 )
 
+set VSF=123
+set OPENKORE_HOST=%OPENKORE_HOST%
+set OPENKORE_PORT=%OPENKORE_PORT%
+
 :: Set game cwd
 cd /d %GAME_FOLDER%
 
@@ -54,7 +61,7 @@ for /f %%p in ('powershell -nologo -command "Start-Process -FilePath '%GAME_EXE%
 )
 
 :: Set openkore cwd
-cd /d "%~dp0"
+cd /d %CURRENT_CWD%
 
 :: Run openkore perl
 perl openkore.pl --config="%account_file%"
