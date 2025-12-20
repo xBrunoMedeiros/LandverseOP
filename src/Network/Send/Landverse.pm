@@ -10,7 +10,9 @@ sub new {
 	my $self = $class->SUPER::new( @_ );
 
 	my %packets = (
+		'01D5' => ['npc_talk_text', 'v a4 a*',              [qw(len ID text)]],
 	);
+
 
 	$self->{packet_list}{$_} = $packets{$_} for keys %packets;
 
@@ -18,6 +20,11 @@ sub new {
 	);
 
 	return $self;
+}
+
+sub reconstruct_npc_talk_text() {
+	my ( $self, $args ) = @_;
+	$args->{len} -= 1;
 }
 
 1;
