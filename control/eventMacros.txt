@@ -1,0 +1,67 @@
+######################################################
+##                                                  ##
+##                   MADE BY                        ##
+##               GALEGOOW / DEZAO                   ##
+##                                                  ##
+##          https://discord.gg/QvrpYRpjeR           ##
+##                                                  ##
+######################################################
+automacro setupInicial {
+    exclusive 1
+    run-once 1
+    JobID 0
+    JobLevel == 1
+    InMap new_1-1
+    call {
+        do conf itemsMaxWeight_sellOrStore 68
+        do conf statsAddAuto 1
+        do conf route_teleport 1
+        do conf statsAddAuto_list dex 20, agi 50, dex 30, str 50, vit 30, agi 90, luk 90
+        do conf statsAddAuto_dontUseBonus 1
+        do conf statsAdd_over_99 1
+        do conf skillsAddAuto 1
+        do conf skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_STEAL 10, TF_POISON 10, TF_DETOXIFY 1, TF_HIDING 8, AS_KATAR 10, AS_SONICBLOW 10
+        do conf teleportAuto_item1 Fly Wing
+        do conf avoidGM_namePattern none
+        do conf avoidGM_near 5
+        do conf avoidGM_near_inTown 1
+        do conf avoidGM_talk 1
+        do conf avoidGM_reconnect 1800
+
+        # Salvar mapa de retorno
+        do conf saveMap prontera
+
+        # Configurações de sentar automático
+        do conf sitAuto_hp_lower 30%
+        do conf sitAuto_hp_upper 60%
+        do conf sitAuto_sp_lower 0
+        do conf sitAuto_sp_upper 0
+    }
+}
+       
+automacro confCampo1 {
+   exclusive 1
+   run-once 1
+   JobID 0
+   JobLevel <= 5
+   InMap new_1-1
+   call {
+    do talknpc 53 114 c c c c r0 c c c c n
+    do pause 1
+    do talknpc 53 114 c c c n
+    do pause 1
+    do move new_1-2
+   }
+}
+
+automacro confCampo2 {
+    priority 1
+    exclusive 1
+    JobID 0
+    InMap new_1-2
+    call {
+        do move 98 25
+        pause 1
+        do talknpc 100 29 c t=teste c c r0 c c c c
+    }
+}
