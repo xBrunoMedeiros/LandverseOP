@@ -3,19 +3,16 @@
 #######################################
 # Openkore configs
 #######################################
-XKore_listenPort 6902
-adminPassword
+XKore_port 2351
+adminPassword 
 
 #######################################
 # Openkore account
 #######################################
-master
 server
-username
+username 
 password
-loginPinCode
 char
-otpSeed
 storageAuto_password
 
 #######################################
